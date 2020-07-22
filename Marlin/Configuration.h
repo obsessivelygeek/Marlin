@@ -1091,8 +1091,8 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 493
-#define Y_BED_SIZE 494
+#define X_BED_SIZE 490
+#define Y_BED_SIZE 490
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1218,7 +1218,7 @@
  * Turn on with the command 'M111 S32'.
  * NOTE: Requires a lot of PROGMEM!
  */
-//#define DEBUG_LEVELING_FEATURE
+#define DEBUG_LEVELING_FEATURE
 
 #if ANY(MESH_BED_LEVELING, AUTO_BED_LEVELING_BILINEAR, AUTO_BED_LEVELING_UBL)
   // Gradually reduce leveling correction until a set height is reached,
