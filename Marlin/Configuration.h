@@ -2214,7 +2214,7 @@
 
   // Use a single Neopixel LED for static (background) lighting
   //#define NEOPIXEL_BKGD_LED_INDEX  30               // Index of the LED to use
-  #define NEOPIXEL_BKGD_COLOR { 127, 73, 20, 10 } // R, G, B, W
+  #define NEOPIXEL_BKGD_COLOR { 255, 147, 41, 20 } // R, G, B, W
 #endif
 
 /**
