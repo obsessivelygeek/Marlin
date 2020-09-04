@@ -43,8 +43,13 @@
 //
 // Timers
 //
+<<<<<<< HEAD
 #define STEP_TIMER 6
 #define TEMP_TIMER 7
+=======
+#define STEP_TIMER                             6
+#define TEMP_TIMER                             7
+>>>>>>> upstream/2.0.x
 
 //
 // Limit Switches

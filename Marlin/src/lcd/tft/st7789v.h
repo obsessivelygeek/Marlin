@@ -39,7 +39,13 @@
 #define ST7789V_ORIENTATION_DOWN  0                                     // 240x320 ; Cable on the lower side
 
 //#define ST7789V_COLOR_BGR
+<<<<<<< HEAD
 #define ST7789V_ORIENTATION       ST7789V_ORIENTATION_LEFT
+=======
+#ifndef ST7789V_ORIENTATION
+  #define ST7789V_ORIENTATION     ST7789V_ORIENTATION_LEFT
+#endif
+>>>>>>> upstream/2.0.x
 #define ST7789V_MADCTL_DATA       (ST7789V_ORIENTATION | TERN(ST7789V_COLOR_BGR, ST7789V_MADCTL_BGR, ST7789V_MADCTL_RGB))
 
 #define ST7789V_NOP               0x00 // No Operation

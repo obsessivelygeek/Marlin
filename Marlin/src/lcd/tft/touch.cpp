@@ -22,10 +22,17 @@
 #if ENABLED(TOUCH_SCREEN)
 
 #include "touch.h"
+<<<<<<< HEAD
 #include "pinconfig.h"
 
 #include "../ultralcd.h"
 #include "../menu/menu.h"
+=======
+
+#include "../ultralcd.h"  // for ui methods
+#include "../menu/menu_item.h" // for touch_screen_calibration
+
+>>>>>>> upstream/2.0.x
 #include "../../module/temperature.h"
 #include "../../module/planner.h"
 

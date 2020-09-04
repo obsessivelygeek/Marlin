@@ -27,8 +27,13 @@
 #define BOARD_INFO_NAME      "Lerdge S"
 #define DEFAULT_MACHINE_NAME "LERDGE"
 
+<<<<<<< HEAD
 #define STEP_TIMER 4
 #define TEMP_TIMER 2
+=======
+#define STEP_TIMER                             4
+#define TEMP_TIMER                             2
+>>>>>>> upstream/2.0.x
 
 //#define I2C_EEPROM
 
@@ -127,7 +132,11 @@
 #endif
 
 //
+<<<<<<< HEAD
 // Prusa i3 MK2 Multi Material Multiplexer Support
+=======
+// Průša i3 MK2 Multi Material Multiplexer Support
+>>>>>>> upstream/2.0.x
 //
 //#define E_MUX0_PIN                        -1
 //#define E_MUX1_PIN                        -1
@@ -173,15 +182,26 @@
 
 #if ENABLED(SPI_EEPROM)
   // Lerdge has an SPI EEPROM Winbond W25Q128 (128Mbits) https://www.pjrc.com/teensy/W25Q128FV.pdf
+<<<<<<< HEAD
   #define SPI_CHAN_EEPROM1 1
+=======
+  #define SPI_CHAN_EEPROM1                     1
+>>>>>>> upstream/2.0.x
   #define SPI_EEPROM1_CS                    PB12  // datasheet: /CS pin, found with multimeter, not tested
   #define EEPROM_SCK                        PB13  // datasheet: CLK pin, found with multimeter, not tested
   #define EEPROM_MISO                       PB14  // datasheet: DO pin, found with multimeter, not tested
   #define EEPROM_MOSI                       PB15  // datasheet: DI pin, found with multimeter, not tested
+<<<<<<< HEAD
   #define EEPROM_PAGE_SIZE 0x1000U                // 4KB (from datasheet)
   #define MARLIN_EEPROM_SIZE 16UL * (EEPROM_PAGE_SIZE)   // Limit to 64KB for now...
 #else
   #define MARLIN_EEPROM_SIZE 0x800U               // On SD, Limit to 2KB, require this amount of RAM
+=======
+  #define EEPROM_PAGE_SIZE               0x1000U  // 4KB (from datasheet)
+  #define MARLIN_EEPROM_SIZE 16UL * (EEPROM_PAGE_SIZE)   // Limit to 64KB for now...
+#else
+  #define MARLIN_EEPROM_SIZE              0x800U  // On SD, Limit to 2KB, require this amount of RAM
+>>>>>>> upstream/2.0.x
 #endif
 
 //

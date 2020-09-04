@@ -92,7 +92,11 @@
 //
 #define HEATER_0_PIN                        PG12  // HEATER1
 #define HEATER_BED_PIN                      PG11  // HOT BED
+<<<<<<< HEAD
 #define HEATER_BED_INVERTING true
+=======
+#define HEATER_BED_INVERTING                true
+>>>>>>> upstream/2.0.x
 
 //
 // Fans

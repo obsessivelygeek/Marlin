@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/env python
+=======
+#!/usr/bin/env python3
+>>>>>>> upstream/2.0.x
 #
 # for python3.5 or higher
 #-----------------------------------

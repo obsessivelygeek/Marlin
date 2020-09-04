@@ -86,11 +86,19 @@ class TFT_String {
     static void set();
     static void add(uint8_t character) { add_character(character); eol(); }
     static void add(uint8_t *string) { while (*string) { add_character(*string++); } eol(); }
+<<<<<<< HEAD
     static void add(uint8_t *string, uint8_t index, uint8_t *itemString = NULL);
     static void set(uint8_t *string) { set(); add(string); };
     static void set(uint8_t *string, uint8_t index, const char *itemString = NULL) { set(); add(string, index, (uint8_t *)itemString); };
     static inline void set(const char *string) { set((uint8_t *)string); }
     static inline void set(const char *string, uint8_t index, const char *itemString = NULL) { set((uint8_t *)string, index, itemString); }
+=======
+    static void add(uint8_t *string, int8_t index, uint8_t *itemString = NULL);
+    static void set(uint8_t *string) { set(); add(string); };
+    static void set(uint8_t *string, int8_t index, const char *itemString = NULL) { set(); add(string, index, (uint8_t *)itemString); };
+    static inline void set(const char *string) { set((uint8_t *)string); }
+    static inline void set(const char *string, int8_t index, const char *itemString = NULL) { set((uint8_t *)string, index, itemString); }
+>>>>>>> upstream/2.0.x
     static inline void add(const char *string) { add((uint8_t *)string); }
 
     static void trim(uint8_t character = 0x20);

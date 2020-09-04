@@ -38,8 +38,17 @@
 #define ILI9341_ORIENTATION_LEFT  ILI9341_MADCTL_MY | ILI9341_MADCTL_MX | ILI9341_MADCTL_MV // 320x240 ; Cable on the left side
 #define ILI9341_ORIENTATION_DOWN  ILI9341_MADCTL_MX	                                        // 240x320 ; Cable on the upper side
 
+<<<<<<< HEAD
 #define ILI9341_COLOR_BGR
 #define ILI9341_ORIENTATION       ILI9341_ORIENTATION_LEFT
+=======
+#ifndef ILI9341_COLOR_RGB
+  #define ILI9341_COLOR_BGR
+#endif
+#ifndef ILI9341_ORIENTATION
+  #define ILI9341_ORIENTATION     ILI9341_ORIENTATION_LEFT
+#endif
+>>>>>>> upstream/2.0.x
 #define ILI9341_MADCTL_DATA      (ILI9341_ORIENTATION | TERN(ILI9341_COLOR_BGR, ILI9341_MADCTL_BGR, ILI9341_MADCTL_RGB))
 
 #define ILI9341_NOP               0x00 // No Operation

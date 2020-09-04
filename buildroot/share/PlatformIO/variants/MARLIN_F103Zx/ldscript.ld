@@ -102,7 +102,11 @@ SECTIONS
     . = ALIGN(4);
   } >FLASH
 
+<<<<<<< HEAD
   .ARM.extab   : { 
+=======
+  .ARM.extab   : {
+>>>>>>> upstream/2.0.x
   	. = ALIGN(4);
   	*(.ARM.extab* .gnu.linkonce.armextab.*)
   	. = ALIGN(4);
@@ -146,7 +150,11 @@ SECTIONS
   _sidata = LOADADDR(.data);
 
   /* Initialized data sections into "RAM" Ram type memory */
+<<<<<<< HEAD
   .data : 
+=======
+  .data :
+>>>>>>> upstream/2.0.x
   {
     . = ALIGN(4);
     _sdata = .;        /* create a global symbol at data start */
@@ -157,7 +165,11 @@ SECTIONS
     _edata = .;        /* define a global symbol at data end */
   } >RAM AT> FLASH
 
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> upstream/2.0.x
   /* Uninitialized data section into "RAM" Ram type memory */
   . = ALIGN(4);
   .bss :
@@ -185,8 +197,11 @@ SECTIONS
     . = ALIGN(8);
   } >RAM
 
+<<<<<<< HEAD
   
 
+=======
+>>>>>>> upstream/2.0.x
   /* Remove information from the compiler libraries */
   /DISCARD/ :
   {
@@ -197,4 +212,7 @@ SECTIONS
 
   .ARM.attributes 0 : { *(.ARM.attributes) }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/2.0.x
