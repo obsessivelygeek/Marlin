@@ -62,6 +62,19 @@
   #define ENCODER_STEPS_PER_MENU_ITEM 1
   #define ENCODER_FEEDRATE_DEADZONE 2
 
+#elif ENABLED(ZONESTAR_12864LCD)
+  #define DOGLCD
+  #define IS_RRD_SC
+  #define U8GLIB_ST7920
+
+#elif ENABLED(ZONESTAR_12864OLED)
+  #define IS_RRD_SC
+  #define U8GLIB_SH1106
+
+#elif ENABLED(ZONESTAR_12864OLED_SSD1306)
+  #define IS_RRD_SC
+  #define IS_U8GLIB_SSD1306
+
 #elif ENABLED(RADDS_DISPLAY)
   #define IS_ULTIPANEL
   #define ENCODER_PULSES_PER_STEP 2
@@ -273,14 +286,15 @@
   #define DELAYED_BACKLIGHT_INIT
 #endif
 
-// FSMC/SPI TFT Panels (HAL STM32)
-#if EITHER(TFT_320x240, TFT_480x320)
+// FSMC/SPI TFT Panels using standard HAL/tft/tft_(fsmc|spi).h
+#if ANY(TFT_320x240, TFT_480x320, TFT_LVGL_UI_FSMC, FSMC_GRAPHICAL_TFT)
   #define HAS_FSMC_TFT 1
-#elif EITHER(TFT_320x240_SPI, TFT_480x320_SPI)
+#elif ANY(TFT_320x240_SPI, TFT_480x320_SPI, TFT_LVGL_UI_SPI, SPI_GRAPHICAL_TFT)
   #define HAS_SPI_TFT 1
 #endif
 
-#if HAS_FSMC_TFT || HAS_SPI_TFT
+// Color UI
+#if ANY(TFT_320x240, TFT_480x320, TFT_320x240_SPI, TFT_480x320_SPI)
   #define HAS_GRAPHICAL_TFT 1
   #define IS_ULTIPANEL
 #endif
@@ -498,7 +512,7 @@
   #undef DISABLE_INACTIVE_EXTRUDER
 #endif
 
-// Prusa MK2 Multiplexer and MMU 2.0 force SINGLENOZZLE
+// Průša MK2 Multiplexer and MMU 2.0 force SINGLENOZZLE
 #if EITHER(MK2_MULTIPLEXER, PRUSA_MMU2)
   #define SINGLENOZZLE
 #endif
@@ -765,4 +779,9 @@
  */
 #ifndef EXTRUDE_MINTEMP
   #define EXTRUDE_MINTEMP 170
+#endif
+
+// This flag indicates if Neopixel pins are shared or separated
+#if EITHER(MULTIPLE_NEOPIXEL_TYPES, NEOPIXEL2_INSERIES)
+  #define CONJOINED_NEOPIXEL 1
 #endif
